@@ -2,8 +2,7 @@
 import pathlib
 
 import setuptools
-from ruth import VERSION
-
+from ruth_tts_transformer import VERSION
 
 here = pathlib.Path(__file__).parent.resolve()
 
@@ -11,20 +10,20 @@ here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 core_requirements = [
-    "click~=8.0.0",
-    "rich~=11.1.0",
-    "aiohttp~=3.6.3",
-    "pandas~=1.2.5",
-    "jsonpickle~=2.1.0",
-    "pyyaml~=6.0",
-    "torch~=1.11.0",
-    "regex",
-    "scikit-learn~=1.0.2",
+    'tqdm',
+    'rotary_embedding_torch',
+    'inflect',
+    'progressbar',
+    'einops',
+    'unidecode',
+    'scipy',
+    'librosa',
+    'transformers',
+    'tokenizers',
 ]
 
-
 setuptools.setup(
-    name='ruthtts',
+    name='ruth-text-to-speech',
     description="A Python CLI for Ruth NLP",
     long_description=long_description,
     long_description_content_type='text/markdown',
